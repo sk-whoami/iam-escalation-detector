@@ -1,0 +1,212 @@
+{
+  "users": [
+    {
+      "id": "user_001",
+      "name": "intern_alice",
+      "roles": ["role_001"]
+    },
+    {
+      "id": "user_002",
+      "name": "developer_bob",
+      "roles": ["role_002", "role_003"]
+    },
+    {
+      "id": "user_003",
+      "name": "support_carol",
+      "roles": ["role_004"]
+    },
+    {
+      "id": "user_004",
+      "name": "manager_dave",
+      "roles": ["role_005", "role_006"]
+    },
+    {
+      "id": "user_005",
+      "name": "contractor_eve",
+      "roles": ["role_007"]
+    },
+    {
+      "id": "user_006",
+      "name": "analyst_frank",
+      "roles": ["role_008"]
+    },
+    {
+      "id": "user_007",
+      "name": "admin_grace",
+      "roles": ["role_009"]
+    }
+  ],
+  "roles": [
+    {
+      "id": "role_001",
+      "name": "intern",
+      "permissions": ["perm_001", "perm_002"],
+      "inherits_from": []
+    },
+    {
+      "id": "role_002",
+      "name": "developer",
+      "permissions": ["perm_003", "perm_004", "perm_005"],
+      "inherits_from": ["role_001"]
+    },
+    {
+      "id": "role_003",
+      "name": "code_reviewer",
+      "permissions": ["perm_006", "perm_007"],
+      "inherits_from": []
+    },
+    {
+      "id": "role_004",
+      "name": "support_staff",
+      "permissions": ["perm_008", "perm_009", "perm_010"],
+      "inherits_from": []
+    },
+    {
+      "id": "role_005",
+      "name": "team_lead",
+      "permissions": ["perm_011", "perm_012"],
+      "inherits_from": ["role_002"]
+    },
+    {
+      "id": "role_006",
+      "name": "project_manager",
+      "permissions": ["perm_013", "perm_014"],
+      "inherits_from": []
+    },
+    {
+      "id": "role_007",
+      "name": "external_contractor",
+      "permissions": ["perm_015", "perm_016"],
+      "inherits_from": []
+    },
+    {
+      "id": "role_008",
+      "name": "security_analyst",
+      "permissions": ["perm_017", "perm_018", "perm_019"],
+      "inherits_from": []
+    },
+    {
+      "id": "role_009",
+      "name": "system_admin",
+      "permissions": ["perm_020", "perm_021", "perm_022", "perm_023"],
+      "inherits_from": ["role_005"]
+    }
+  ],
+  "permissions": [
+    {
+      "id": "perm_001",
+      "name": "read_docs",
+      "risk_level": "low"
+    },
+    {
+      "id": "perm_002",
+      "name": "submit_tickets",
+      "risk_level": "low"
+    },
+    {
+      "id": "perm_003",
+      "name": "write_code",
+      "risk_level": "low"
+    },
+    {
+      "id": "perm_004",
+      "name": "deploy_dev",
+      "risk_level": "medium"
+    },
+    {
+      "id": "perm_005",
+      "name": "access_databases",
+      "risk_level": "medium"
+    },
+    {
+      "id": "perm_006",
+      "name": "approve_merge",
+      "risk_level": "medium"
+    },
+    {
+      "id": "perm_007",
+      "name": "deploy_staging",
+      "risk_level": "medium"
+    },
+    {
+      "id": "perm_008",
+      "name": "view_user_data",
+      "risk_level": "medium"
+    },
+    {
+      "id": "perm_009",
+      "name": "reset_passwords",
+      "risk_level": "high"
+    },
+    {
+      "id": "perm_010",
+      "name": "modify_groups",
+      "risk_level": "high"
+    },
+    {
+      "id": "perm_011",
+      "name": "manage_team",
+      "risk_level": "medium"
+    },
+    {
+      "id": "perm_012",
+      "name": "assign_roles",
+      "risk_level": "critical"
+    },
+    {
+      "id": "perm_013",
+      "name": "budget_approval",
+      "risk_level": "high"
+    },
+    {
+      "id": "perm_014",
+      "name": "resource_allocation",
+      "risk_level": "medium"
+    },
+    {
+      "id": "perm_015",
+      "name": "limited_api_access",
+      "risk_level": "low"
+    },
+    {
+      "id": "perm_016",
+      "name": "temp_storage",
+      "risk_level": "low"
+    },
+    {
+      "id": "perm_017",
+      "name": "audit_logs",
+      "risk_level": "medium"
+    },
+    {
+      "id": "perm_018",
+      "name": "vulnerability_scan",
+      "risk_level": "medium"
+    },
+    {
+      "id": "perm_019",
+      "name": "modify_security_policies",
+      "risk_level": "critical"
+    },
+    {
+      "id": "perm_020",
+      "name": "full_admin",
+      "risk_level": "critical"
+    },
+    {
+      "id": "perm_021",
+      "name": "delete_users",
+      "risk_level": "critical"
+    },
+    {
+      "id": "perm_022",
+      "name": "modify_iam",
+      "risk_level": "critical"
+    },
+    {
+      "id": "perm_023",
+      "name": "access_all_resources",
+      "risk_level": "critical"
+    }
+  ]
+}

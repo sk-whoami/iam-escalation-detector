@@ -1,0 +1,113 @@
+{
+  "users": [
+    {
+      "id": "user_001",
+      "name": "junior_dev_alex",
+      "roles": ["role_001"]
+    },
+    {
+      "id": "user_002",
+      "name": "contractor_maria",
+      "roles": ["role_002"]
+    },
+    {
+      "id": "user_003",
+      "name": "senior_dev_james",
+      "roles": ["role_003", "role_004"]
+    }
+  ],
+  "roles": [
+    {
+      "id": "role_001",
+      "name": "junior_developer",
+      "permissions": ["perm_001", "perm_002", "perm_003"],
+      "inherits_from": []
+    },
+    {
+      "id": "role_002",
+      "name": "temporary_access",
+      "permissions": ["perm_001", "perm_004"],
+      "inherits_from": []
+    },
+    {
+      "id": "role_003",
+      "name": "senior_developer",
+      "permissions": ["perm_005", "perm_006", "perm_007"],
+      "inherits_from": ["role_001"]
+    },
+    {
+      "id": "role_004",
+      "name": "deployment_manager",
+      "permissions": ["perm_008", "perm_009"],
+      "inherits_from": []
+    },
+    {
+      "id": "role_005",
+      "name": "security_admin",
+      "permissions": ["perm_010", "perm_011", "perm_012"],
+      "inherits_from": ["role_003", "role_004"]
+    }
+  ],
+  "permissions": [
+    {
+      "id": "perm_001",
+      "name": "read_code",
+      "risk_level": "low"
+    },
+    {
+      "id": "perm_002",
+      "name": "write_code",
+      "risk_level": "low"
+    },
+    {
+      "id": "perm_003",
+      "name": "submit_pull_request",
+      "risk_level": "low"
+    },
+    {
+      "id": "perm_004",
+      "name": "read_logs",
+      "risk_level": "medium"
+    },
+    {
+      "id": "perm_005",
+      "name": "merge_code",
+      "risk_level": "medium"
+    },
+    {
+      "id": "perm_006",
+      "name": "modify_ci_cd",
+      "risk_level": "high"
+    },
+    {
+      "id": "perm_007",
+      "name": "access_prod_database",
+      "risk_level": "high"
+    },
+    {
+      "id": "perm_008",
+      "name": "deploy_production",
+      "risk_level": "high"
+    },
+    {
+      "id": "perm_009",
+      "name": "rollback_deployment",
+      "risk_level": "high"
+    },
+    {
+      "id": "perm_010",
+      "name": "modify_iam_policies",
+      "risk_level": "critical"
+    },
+    {
+      "id": "perm_011",
+      "name": "assign_roles",
+      "risk_level": "critical"
+    },
+    {
+      "id": "perm_012",
+      "name": "full_admin",
+      "risk_level": "critical"
+    }
+  ]
+}
