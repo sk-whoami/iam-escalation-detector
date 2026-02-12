@@ -1,0 +1,15 @@
+{
+  "users": [
+    {"id": "intern", "roles": ["support"]},
+    {"id": "staff", "roles": ["it_ops"]}
+  ],
+  "roles": [
+    {"name": "support", "permissions": ["modify_groups"], "inherits": []},
+    {"name": "it_ops", "permissions": ["read_servers"], "inherits": []},
+    {"name": "admin", "permissions": ["full_access"], "inherits": []}
+  ],
+  "permissions": [
+    {"name": "modify_groups", "can_assign": ["admin"]},
+    {"name": "read_servers"}
+  ]
+}
