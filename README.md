@@ -1,4 +1,4 @@
-# 🛡 IAM Escalation Detector
+# 🛡 IAM Guardian Project
 
 ## Privilege Escalation Detection & IAM Risk Analysis Platform
 
